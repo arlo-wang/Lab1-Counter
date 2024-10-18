@@ -4,7 +4,7 @@
             "name": "WSL",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/local/share/verilator/include",
+                "/usr/local/share/verilator/include/",
                 "../"
             ],
             "defines": [],

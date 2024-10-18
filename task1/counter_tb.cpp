@@ -2,9 +2,8 @@
 // Vcounter.h for the module counter
 
 #include "Vcounter.h"
-#include "verilated.h"
+#include "/usr/local/share/verilator/include/verilated.h"
 #include "verilated_vcd_c.h"
-// #include "vbuddy.cpp"
 
 int main(int argc, char **argv, char **env) {
     // i counts the number of clock cycles to simulate.
