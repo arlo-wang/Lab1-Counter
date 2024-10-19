@@ -2,7 +2,7 @@
 // Vcounter.h for the module counter
 
 #include "Vcounter.h"
-#include "/usr/local/share/verilator/include/verilated.h"
+#include "verilated.h"
 #include "verilated_vcd_c.h"
 #include "vbuddy.cpp"
 
@@ -55,7 +55,8 @@ int main(int argc, char **argv, char **env) {
 
         // Change rst and en signals during simulation
         top->rst = (i < 2) | (i == 15);
-        top->en = (i > 4);
+        top->en = vbdFlag();
+        // top->en = (i > 4);
         if (Verilated::gotFinish())  exit(0);
     }
 

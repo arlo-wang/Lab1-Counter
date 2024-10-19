@@ -12,3 +12,6 @@ make -j -C obj_dir/ -f Vcounter.mk Vcounter
 
 # run excutable simulation file
 obj_dir/Vcounter
+
+#list the name of the Vbuddy
+ls /dev/tty.u*

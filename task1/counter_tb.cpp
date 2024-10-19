@@ -2,7 +2,7 @@
 // Vcounter.h for the module counter
 
 #include "Vcounter.h"
-#include "/usr/local/share/verilator/include/verilated.h"
+#include "verilated.h"
 #include "verilated_vcd_c.h"
 
 int main(int argc, char **argv, char **env) {

@@ -1,7 +1,7 @@
 {
     "configurations": [
         {
-            "name": "WSL",
+            "name": "MAC",
             "includePath": [
                 "${workspaceFolder}/**",
                 "/usr/local/share/verilator/include/",
