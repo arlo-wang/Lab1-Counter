@@ -19,7 +19,6 @@ class alignas(VL_CACHE_LINE_BYTES) Vcounter___024root final : public VerilatedMo
     VL_IN8(en,0,0);
     VL_OUT8(count,7,0);
     CData/*0:0*/ __Vtrigprevexpr___TOP__clk__0;
-    CData/*0:0*/ __Vtrigprevexpr___TOP__rst__0;
     CData/*0:0*/ __VactContinue;
     IData/*31:0*/ __VactIterCount;
     VlTriggerVec<1> __VactTriggered;

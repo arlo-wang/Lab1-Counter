@@ -10,6 +10,7 @@ int main(int argc, char **argv, char **env) {
     // clk is the module clock signal.
     int i;
     int clk;
+    int stop_cycles = 0;
 
     Verilated::commandArgs(argc, argv);
 
@@ -59,9 +60,19 @@ int main(int argc, char **argv, char **env) {
             top->clk = !top->clk;
             top->eval ();
         }
-        // Change rst and en signals during simulation
-        top->rst = (i < 2) | (i == 15);
-        top->en = (i > 4);
+
+        top->rst = (i % 3 == 0);
+        top->en = (i>4);
+        // if (stop_cycles > 0) {
+        //     top->en = 0;
+        //     stop_cycles--;
+        // } else {
+        //     top->en = 1;
+        //     if (top->count == 0x9) {
+        //         stop_cycles = 3;
+        //     }
+        // }
+
         if (Verilated::gotFinish())  exit(0);
     }
     tfp->close();

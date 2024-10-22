@@ -16,12 +16,9 @@ void Vcounter___024root___eval_triggers__act(Vcounter___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vcounter___024root___eval_triggers__act\n"); );
     auto &vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    vlSelfRef.__VactTriggered.set(0U, (((IData)(vlSelfRef.clk) 
-                                        & (~ (IData)(vlSelfRef.__Vtrigprevexpr___TOP__clk__0))) 
-                                       | ((IData)(vlSelfRef.rst) 
-                                          & (~ (IData)(vlSelfRef.__Vtrigprevexpr___TOP__rst__0)))));
+    vlSelfRef.__VactTriggered.set(0U, ((IData)(vlSelfRef.clk) 
+                                       & (~ (IData)(vlSelfRef.__Vtrigprevexpr___TOP__clk__0))));
     vlSelfRef.__Vtrigprevexpr___TOP__clk__0 = vlSelfRef.clk;
-    vlSelfRef.__Vtrigprevexpr___TOP__rst__0 = vlSelfRef.rst;
 #ifdef VL_DEBUG
     if (VL_UNLIKELY(vlSymsp->_vm_contextp__->debug())) {
         Vcounter___024root___dump_triggers__act(vlSelf);
