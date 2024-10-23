@@ -23,4 +23,4 @@
 ## Task3: Vbuddy parameter & flag in one-shot mode
 
 ## Task4: Displaying count as Binary coded Decimal (BCD) numbers
-
+![bcd](logbook_image/Task4.png)
